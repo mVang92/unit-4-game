@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Crystals Collector</Title>
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+        <!-- Boostrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+            integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    </head>
+
+    <body background="assets/images/background.jpg">
+        <header>
+            <h1>Crystals Collector!</h1>
+        </header>
+        <div class="container">
+            <div class="box">
+                <!-- First Row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img id="image" src="assets/images/Main.jpg" alt="Auto Repair Word Guess Game">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="info">
+                            <p>
+                                You will be given a random number at the start of the game.
+                            </p>
+                            <p>
+                                There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.
+                            </p>
+                            <p>
+                                You win the game by matching your total score to random number, you ose the game if your total score goes above the random number.
+                            </p>
+                            <p>
+                                The value of each crystal is hidden from you until you click on it.
+                            </p>
+                            <p>
+                                Each time when the game starts, the game will change the values of each crystal.
+                            </p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <br>
+                <div class="box">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 id="randomNum">59</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="wins">Wins
+                                <p id="winScore">0</p>
+                            </div>
+                            <br>
+                            <div id="loses">Losses
+                                <p id="loseScore">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="box" id="wordToGuessFormat">// Crystals go here</p>
+                    <br>
+                    <p class="box">Your current guess is: <span id="currentScore">0</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 id="showWord"></h2>
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- Javasript link source -->
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+/*div {
+    border: 1px solid red;
+}*/
+
+header {
+    color: red;
+    text-align: center;
+}
+
+.box {
+    margin: auto;
+    width: 80%;
+    border: 1px solid black;
+}
+
+#info {
+    padding: 5px;
+    font-weight: bold;
+}
+
+#currentScore {
+    color: red;
+}
