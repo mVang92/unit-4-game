@@ -14,11 +14,15 @@ header {
     margin-bottom: 10px;
 }
 
-.box {
+.box, .crystalBox {
     background-color: bisque;
     margin: auto;
     width: 80%;
     border: 1px solid black;
+}
+
+.crystalBox {
+    padding: 15px;
 }
 
 #info {
@@ -31,6 +35,16 @@ header {
     color: red;
 }
 
-#randomNum {
+.midText {
     text-align: center;
+}
+
+.currentNum {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.crystals {
+    display: block;
+    margin: auto;
 }

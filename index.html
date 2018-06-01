@@ -26,7 +26,7 @@
                                 There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.
                             </p>
                             <p>
-                                You win the game by matching your total score to random number, you ose the game if your total score goes above the random number.
+                                You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
                             </p>
                             <p>
                                 The value of each crystal is hidden from you until you click on it.
@@ -41,34 +41,51 @@
             <br>
             <div class="box">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <h2 id="randomNum">000</h2>
+                    <div class="col-lg-4">
+                        <div class="midText">Number to Reach
+                            <h2 id="randomNum">000</h2>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div id="wins">Wins
+                    <div class="col-lg-4 currentNum">
+                        <div class="midText">Your Current Number
+                            <h2 id="userGuess">000</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="midText">Wins
                             <p id="winScore">0</p>
                         </div>
                         <br>
-                        <div id="loses">Losses
+                        <div class="midText">Losses
                             <p id="loseScore">0</p>
                         </div>
                     </div>
                 </div>
             </div>   
             <br>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="box" id="wordToGuessFormat">// Crystals go here</p>
-                    <br>
-                    <p class="box">Your current guess is: <span id="currentScore">0</span></p>
+            <div class="crystalBox">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p class="crystals">
+                            <img src="assets/images/crystal1.png" alt="crystal 1" style="width:100%">
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p class="crystals">
+                            <img src="assets/images/crystal2.png" alt="crystal 2" style="width:100%">
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <p class="crystals">
+                            <img src="assets/images/crystal3.png" alt="crystal 3" style="width:100%">
+                    </div>
+                    <div class="col-lg-3">
+                        <p class="crystals">
+                            <img src="assets/images/crystal4.png" alt="crystal 4" style="width:100%">
+                        </p>
+                    </div> 
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 id="showWord"></h2>
-                </div>
-            </div>
-            <br>
+            </div> 
         </div>
         <!-- Javasript link source -->
         <script type="text/javascript" src="assets/javascript/game.js"></script>
