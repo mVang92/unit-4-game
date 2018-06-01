@@ -2,12 +2,20 @@
     border: 1px solid red;
 }*/
 
+body {
+    background-color: grey !important;
+}
+
 header {
-    color: red;
+    background: crimson;
+    border-bottom: 1px solid black;
+    color: white;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .box {
+    background-color: bisque;
     margin: auto;
     width: 80%;
     border: 1px solid black;
@@ -16,8 +24,13 @@ header {
 #info {
     padding: 5px;
     font-weight: bold;
+    background-color: bisque;
 }
 
 #currentScore {
     color: red;
+}
+
+#randomNum {
+    text-align: center;
 }
