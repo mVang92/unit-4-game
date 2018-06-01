@@ -10,24 +10,60 @@
 
 // Fun stuff
 $(document).ready(function() {
-    var cpuRandomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-    var crystalUno = crystalRandomNumber();
-    var crystalTwo = crystalRandomNumber();
-    var crystalThree = crystalRandomNumber();
-    var crystalFour = crystalRandomNumber();
-    // Test random numbers
-    // console.log("Number to reach: " + cpuRandomNum);
-    console.log("crystal 1: " + crystalUno);
-    console.log("crystal 2: " + crystalTwo);
-    console.log("crystal 3: " + crystalThree);
-    console.log("crystal 4: " + crystalFour);
+var wins = 0;
+var loses = 0;
 
-    // Place computer random number into HTML with id="randomNum"
-    $("#randomNum").html(cpuRandomNum);
+    // Run the game function
+    function running(){
+        // Random geneated variables
+        var cpuRandomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        var crystalUno = crystalRandomNumber();
+        var crystalTwo = crystalRandomNumber();
+        var crystalThree = crystalRandomNumber();
+        var crystalFour = crystalRandomNumber();
+        // Other variables
+        
+
+        // Test random numbers
+        // console.log("Number to reach: " + cpuRandomNum);
+        // console.log("crystal 1: " + crystalUno);
+        // console.log("crystal 2: " + crystalTwo);
+        // console.log("crystal 3: " + crystalThree);
+        // console.log("crystal 4: " + crystalFour);
+
+        // Place computer random number into HTML with id="randomNum"
+        $("#randomNum").html(cpuRandomNum);
+
+        if (crystalFour < 5){
+            wins++;
+            $("#winScore").html(wins);
+        } else {
+            loses++;
+            $("#loseScore").html(loses);
+        }
+    }
+
+    
+    
 
     // Crystal call function to generate random numbers
     function crystalRandomNumber(){
         var crystal = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
         return crystal;
     }
+    
+    // Reset the game
+    function start(){
+        var wins = 0;
+        var loses = 0;
+        $("#winScore").html(wins);
+        $("#loseScore").html(loses);
+        running();
+        // Test start function
+        // console.log("start commited")
+        // setInterval(running, 500);
+    }
+
+    // Magic begins here
+    start();
 });
