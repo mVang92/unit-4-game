@@ -21,15 +21,18 @@ var loses = 0;
         var crystalTwo = crystalRandomNumber();
         var crystalThree = crystalRandomNumber();
         var crystalFour = crystalRandomNumber();
-        // Other variables
-        
-
         // Test random numbers
         // console.log("Number to reach: " + cpuRandomNum);
         // console.log("crystal 1: " + crystalUno);
         // console.log("crystal 2: " + crystalTwo);
         // console.log("crystal 3: " + crystalThree);
         // console.log("crystal 4: " + crystalFour);
+
+        // Prepend crystal images to HTML
+        $("#crystal1").prepend('<img id="crystalOne" src="assets/images/crystal1.png" alt="crystal 1" style="width:100%" />')
+        $("#crystal2").prepend('<img id="crystalOne" src="assets/images/crystal2.png" alt="crystal 1" style="width:100%" />')
+        $("#crystal3").prepend('<img id="crystalOne" src="assets/images/crystal3.png" alt="crystal 1" style="width:100%" />')
+        $("#crystal4").prepend('<img id="crystalOne" src="assets/images/crystal4.png" alt="crystal 1" style="width:100%" />')
 
         // Place computer random number into HTML with id="randomNum"
         $("#randomNum").html(cpuRandomNum);
@@ -42,9 +45,6 @@ var loses = 0;
             $("#loseScore").html(loses);
         }
     }
-
-    
-    
 
     // Crystal call function to generate random numbers
     function crystalRandomNumber(){
