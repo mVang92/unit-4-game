@@ -10,13 +10,13 @@
 
 // Fun stuff
 $(document).ready(function() {
-    // Random geneated crystal variables
-    var crystalUno = crystalRandomNumber();
-    var crystalTwo = crystalRandomNumber();
-    var crystalThree = crystalRandomNumber();
-    var crystalFour = crystalRandomNumber();
+    // Crystal random variables
+    var crystalUno = "";
+    var crystalTwo = "";
+    var crystalThree = "";
+    var crystalFour = "";
 
-    // Random cpu number
+    // CPU random variables
     var cpuRandomNum = "";
 
     // Other global variables   
@@ -25,10 +25,10 @@ $(document).ready(function() {
     var userNum = 0;
 
     // Place crystal images into HTML
-    $("#crystal1").html('<img src="assets/images/crystal1.png" alt="crystal 1" style="width:100%" />')
-    $("#crystal2").html('<img src="assets/images/crystal2.png" alt="crystal 2" style="width:100%" />')
-    $("#crystal3").html('<img src="assets/images/crystal3.png" alt="crystal 3" style="width:100%" />')
-    $("#crystal4").html('<img src="assets/images/crystal4.png" alt="crystal 4" style="width:100%" />')
+    $("#crystal1").html('<img src="assets/images/crystal1.png" alt="crystal 1" style="width:100%" />');
+    $("#crystal2").html('<img src="assets/images/crystal2.png" alt="crystal 2" style="width:100%" />');
+    $("#crystal3").html('<img src="assets/images/crystal3.png" alt="crystal 3" style="width:100%" />');
+    $("#crystal4").html('<img src="assets/images/crystal4.png" alt="crystal 4" style="width:100%" />');
 
     // Override HTML text for numbers and scores
     $("#winScore").html(wins);
@@ -41,28 +41,28 @@ $(document).ready(function() {
     $("#crystal1").on("click", function() {
         userNum += crystalUno;
         $("#userGuess").html(userNum);
-        console.log("-clicked crystal 1: " + crystalUno);
+        // console.log("-clicked crystal 1: " + crystalUno);
         check();
     });
     // Crystal 2 click function
     $("#crystal2").on("click", function() {
         userNum += crystalTwo;
         $("#userGuess").html(userNum);
-        console.log("-clicked crystal 2: " + crystalTwo);
+        // console.log("-clicked crystal 2: " + crystalTwo);
         check();
     });
     // Crystal 3 click function
     $("#crystal3").on("click", function() {
         userNum += crystalThree;
         $("#userGuess").html(userNum);
-        console.log("-clicked crystal 3: " + crystalThree);
+        // console.log("-clicked crystal 3: " + crystalThree);
         check();
     });
     // Crystal 4 click function
     $("#crystal4").on("click", function() {
         userNum += crystalFour;
         $("#userGuess").html(userNum);
-        console.log("-clicked crystal 4: " + crystalFour);
+        // console.log("-clicked crystal 4: " + crystalFour);
         check();
     });
 
@@ -81,10 +81,10 @@ $(document).ready(function() {
         
         // Test random numbers
         // console.log("Number to reach: " + cpuRandomNum);
-        console.log("crystal 1: " + crystalUno);
-        console.log("crystal 2: " + crystalTwo);
-        console.log("crystal 3: " + crystalThree);
-        console.log("crystal 4: " + crystalFour);
+        // console.log("crystal 1: " + crystalUno);
+        // console.log("crystal 2: " + crystalTwo);
+        // console.log("crystal 3: " + crystalThree);
+        // console.log("crystal 4: " + crystalFour);
     }
 
     // Check function to compare user current number to cpu random number
