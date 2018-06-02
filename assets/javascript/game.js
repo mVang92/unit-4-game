@@ -10,18 +10,25 @@
 
 // Fun stuff
 $(document).ready(function() {
+var cpuRandomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;    
 var wins = 0;
 var loses = 0;
 var userNum = 0;
+// Prepend crystal images to HTML
+$("#crystal1").prepend('<img id="crystalOne" src="assets/images/crystal1.png" alt="crystal 1" style="width:100%" />')
+$("#crystal2").prepend('<img id="crystalOne" src="assets/images/crystal2.png" alt="crystal 1" style="width:100%" />')
+$("#crystal3").prepend('<img id="crystalOne" src="assets/images/crystal3.png" alt="crystal 1" style="width:100%" />')
+$("#crystal4").prepend('<img id="crystalOne" src="assets/images/crystal4.png" alt="crystal 1" style="width:100%" />')
 
     // Run the game function
     function running(){
         // Random geneated variables
-        var cpuRandomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         var crystalUno = crystalRandomNumber();
         var crystalTwo = crystalRandomNumber();
         var crystalThree = crystalRandomNumber();
         var crystalFour = crystalRandomNumber();
+        // Place computer random number into HTML with id="randomNum"
+        $("#randomNum").html(cpuRandomNum);
         
         // Test random numbers
         // console.log("Number to reach: " + cpuRandomNum);
@@ -30,36 +37,44 @@ var userNum = 0;
         console.log("crystal 3: " + crystalThree);
         console.log("crystal 4: " + crystalFour);
 
-        // Place computer random number into HTML with id="randomNum"
-        $("#randomNum").html(cpuRandomNum);
-
-        // Prepend crystal images to HTML
-        $("#crystal1").prepend('<img id="crystalOne" src="assets/images/crystal1.png" alt="crystal 1" style="width:100%" />')
-        $("#crystal2").prepend('<img id="crystalOne" src="assets/images/crystal2.png" alt="crystal 1" style="width:100%" />')
-        $("#crystal3").prepend('<img id="crystalOne" src="assets/images/crystal3.png" alt="crystal 1" style="width:100%" />')
-        $("#crystal4").prepend('<img id="crystalOne" src="assets/images/crystal4.png" alt="crystal 1" style="width:100%" />')
-
         // What happens when crystals are clicked
         // Crystal 1 click function
         $("#crystal1").on("click", function() {
             userNum += crystalUno;
             $("#userGuess").html(userNum);
+            check();
         });
         // Crystal 2 click function
         $("#crystal2").on("click", function() {
             userNum += crystalTwo;
             $("#userGuess").html(userNum);
+            check();
         });
         // Crystal 3 click function
         $("#crystal3").on("click", function() {
             userNum += crystalThree;
             $("#userGuess").html(userNum);
+            check();
         });
         // Crystal 4 click function
         $("#crystal4").on("click", function() {
             userNum += crystalFour;
             $("#userGuess").html(userNum);
+            check();
         });
+    }
+
+    // Check function to compare user current number to cpu random number
+    function check(){
+        if (userNum > cpuRandomNum){
+            console.log("lose");
+            loses++;
+            $("#loseScore").html(loses);
+        } else if (userNum === cpuRandomNum){
+            console.log("win");
+            wins++;
+            $("#winScore").html(wins);
+        }
     }
 
     // Crystal call function to generate random numbers
@@ -73,13 +88,10 @@ var userNum = 0;
         var wins = 0;
         var loses = 0;
         var userNum = 0;
-        $("#winScore").html(wins);
-        $("#loseScore").html(loses);
-        $("#userGuess").html(userNum);
+        $("#winScore").prepend(wins);
+        $("#loseScore").prepend(loses);
+        $("#userGuess").prepend(userNum);
         running();
-        // Test start function
-        // console.log("start commited")
-        // setInterval(running, 500);
     }
 
     // Magic begins here
