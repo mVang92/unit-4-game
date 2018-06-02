@@ -49,3 +49,7 @@ header {
     display: block;
     margin: auto;
 }
+
+#status {
+    height: 50px;
+}
